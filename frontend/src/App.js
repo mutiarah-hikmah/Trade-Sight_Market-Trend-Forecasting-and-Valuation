@@ -69,7 +69,7 @@ function App() {
         
         <div style={{ backgroundColor: 'white', padding: '30px', borderRadius: '15px', boxShadow: '0 4px 12px rgba(255, 182, 193, 0.4)', marginBottom: '20px' }}>
           <h1 style={{ color: '#d6336c', textAlign: 'center', margin: '0 0 10px 0' }}>
-            StockSense Forecasting Dashboard
+            TradeSight Forecasting Dashboard
           </h1>
           <p style={{ color: '#f06595', textAlign: 'center', margin: 0, fontSize: '16px' }}>
             Analisis Komparatif Model & Prediksi Saham HM Sampoerna (HMSP.JK)
