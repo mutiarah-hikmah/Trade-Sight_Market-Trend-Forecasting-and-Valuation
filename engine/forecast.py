@@ -1,10 +1,20 @@
+import os
 import pandas as pd
 import datetime
 from sqlalchemy import create_engine
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, mean_absolute_percentage_error
+from dotenv import load_dotenv
 
-db_url = 'postgresql://postgres:Haimuti0123@localhost:5432/StockSense'
+load_dotenv()
+
+user = os.getenv('DB_USER')
+password = os.getenv('DB_PASSWORD')
+host = os.getenv('DB_HOST')
+port = os.getenv('DB_PORT')
+db_name = os.getenv('DB_NAME')
+
+db_url = f'postgresql://{user}:{password}@{host}:{port}/{db_name}'
 mesin_db = create_engine(db_url)
 
 print("Mengambil data historis dari database...")

@@ -1,8 +1,18 @@
+import os
 import yfinance as yf
 import pandas as pd
 from sqlalchemy import create_engine
+from dotenv import load_dotenv
 
-db_url = 'postgresql://postgres:Haimuti0123@localhost:5432/StockSense'
+load_dotenv()
+
+user = os.getenv('DB_USER')
+password = os.getenv('DB_PASSWORD')
+host = os.getenv('DB_HOST')
+port = os.getenv('DB_PORT')
+db_name = os.getenv('DB_NAME')
+
+db_url = f'postgresql://{user}:{password}@{host}:{port}/{db_name}'
 mesin_db = create_engine(db_url)
 
 kode_saham = 'HMSP.JK' 
