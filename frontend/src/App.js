@@ -58,7 +58,7 @@ function App() {
   if (loading) {
     return (
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#fff5f7', color: '#d6336c', fontSize: '24px', fontWeight: 'bold' }}>
-        Memuat Dashboard StockSense...
+        Loading TradeSight Dashboard...
       </div>
     );
   }
